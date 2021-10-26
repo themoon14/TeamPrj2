@@ -56,7 +56,7 @@ public class UserController {
 	
 	@GetMapping({"/","/home"})
 	public String home() {
-		return "home"; // ViewResolver
+		return "index"; // ViewResolver
 	}
 	
 	@GetMapping("/joinForm")
@@ -76,44 +76,57 @@ public class UserController {
 	
 	
 	// insert into user(username, password, uName, uPhone, uEmail) values('ssar', '1234', 'Tom', '010-1234-9876', 'ssar@naver.com')
+//	@PostMapping("/join")
+//	public String join(JoinReqDto dto) { // username=love&password=1234&name=john&phone=010-1234-5678&email=love@naver.com
+//		
+////		System.out.println(dto.getUsername());
+////		System.out.println(dto.getPassword());
+////		System.out.println(dto.getUName());
+//		System.out.println(dto.getUGender());
+//		
+//		User user = new User();
+//		user.setUsername(dto.getUsername());
+//		user.setPassword(dto.getPassword());
+//		user.setUName(dto.getUName());
+//		user.setUPhone(dto.getUPhone());
+//		user.setUEmail(dto.getUEmail());
+//		user.setUGender(dto.getUGender());
+//		user.setUWeight(dto.getUWeight());
+//		user.setUHeight(dto.getUHeight());
+//		user.setUMuscle(dto.getUMuscle());
+//		user.setUFat(dto.getUFat());
+//		user.setUBMI(dto.getUBMI());
+//		
+////		if(dto.getUsername() == null ||
+////		   dto.getPassword() == null ||
+////		   dto.getUName()    == null ||
+////		   dto.getUPhone()   == null ||
+////		   dto.getUEmail()   == null ||
+////		   dto.getUGender()  == null ||
+////		   !dto.getUsername().equals("") ||
+////		   !dto.getPassword().equals("") ||
+////		   !dto.getUName().equals("")    ||
+////		   !dto.getUPhone().equals("")   ||
+////		   !dto.getUEmail().equals("")   ||
+////		   !dto.getUGender().equals("")
+////		) {
+////			return "error/error";
+////		}
+//		
+//		userRepository.save(user);
+//		
+//		return "redirect:/loginForm"; // Redirection (300) ViewResolver
+//		
+//	}
+	
 	@PostMapping("/join")
-	public String join(JoinReqDto dto) { // username=love&password=1234&name=john&phone=010-1234-5678&email=love@naver.com
-		
-		
-		User user = new User();
-		user.setUsername(dto.getUsername());
-		user.setPassword(dto.getPassword());
-		user.setUName(dto.getUName());
-		user.setUPhone(dto.getUPhone());
-		user.setUEmail(dto.getUEmail());
-		user.setUGender(dto.getUGender());
-		user.setUWeight(dto.getUWeight());
-		user.setUHeight(dto.getUHeight());
-		user.setUMuscle(dto.getUMuscle());
-		user.setUFat(dto.getUFat());
-		user.setUBMI(dto.getUBMI());
-		
-		if(dto.getUsername() == null ||
-		   dto.getPassword() == null ||
-		   dto.getUName()    == null ||
-		   dto.getUPhone()   == null ||
-		   dto.getUEmail()   == null ||
-		   dto.getUGender()  == null ||
-		   !dto.getUsername().equals("") ||
-		   !dto.getPassword().equals("") ||
-		   !dto.getUName().equals("")    ||
-		   !dto.getUPhone().equals("")   ||
-		   !dto.getUEmail().equals("")   ||
-		   !dto.getUGender().equals("")
-		) {
-			return "error/error";
-		}
-		
-		userRepository.save(dto.toEntity());
-		
-		return "redirect:/loginForm"; // Redirection (300) ViewResolver
-		
+	public String join(JoinReqDto dto) {
+
+	userRepository.save(dto.toEntity());
+
+	return "redirect:/loginForm";
 	}
+	
 	
 	@PostMapping("/login") 
 	public String login(LoginReqDto loginDto) {

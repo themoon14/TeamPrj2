@@ -20,9 +20,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	
 	@Query(value = "SELECT * FROM user WHERE username = :username AND password = :password", nativeQuery = true)
 	User mLogin(String username, String password);
-
-	void save(JoinReqDto dto);
-
 	
 }
 

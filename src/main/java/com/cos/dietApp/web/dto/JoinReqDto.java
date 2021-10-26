@@ -30,6 +30,7 @@ public class JoinReqDto {
 		user.setUName(uName);
 		user.setUPhone(uPhone);
 		user.setUEmail(uEmail);
+		user.setUGender(uGender);
 		
 		user.setUWeight(uWeight);
 		user.setUHeight(uHeight);
@@ -41,3 +42,10 @@ public class JoinReqDto {
 		
 	}
 }
+
+
+
+
+
+
+

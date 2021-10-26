@@ -29,7 +29,7 @@ public class User {
 	private String uPhone;
 	@Column(nullable = false, length = 50)
 	private String uEmail;
-	@Column(nullable = false, length = 10)
+	@Column(nullable = false, length = 20)
 	private String uGender;
 	
 	private int uWeight;
