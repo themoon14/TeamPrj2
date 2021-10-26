@@ -54,7 +54,7 @@ public class UserController {
 //		userRepository.save(user);
 //	}
 	
-	@GetMapping({"/","/home"})
+	@GetMapping({"/","/index"})
 	public String home() {
 		return "index"; // ViewResolver
 	}
@@ -79,10 +79,17 @@ public class UserController {
 //	@PostMapping("/join")
 //	public String join(JoinReqDto dto) { // username=love&password=1234&name=john&phone=010-1234-5678&email=love@naver.com
 //		
-////		System.out.println(dto.getUsername());
-////		System.out.println(dto.getPassword());
-////		System.out.println(dto.getUName());
+//		System.out.println(dto.getUsername());
+//		System.out.println(dto.getPassword());
+//		System.out.println(dto.getUName());
+//		System.out.println(dto.getUPhone());
+//		System.out.println(dto.getUEmail());
 //		System.out.println(dto.getUGender());
+//		System.out.println(dto.getUHeight());
+//		System.out.println(dto.getUMuscle());
+//		System.out.println(dto.getUFat());
+//		System.out.println(dto.getUBMI());
+//		
 //		
 //		User user = new User();
 //		user.setUsername(dto.getUsername());
@@ -97,28 +104,28 @@ public class UserController {
 //		user.setUFat(dto.getUFat());
 //		user.setUBMI(dto.getUBMI());
 //		
-////		if(dto.getUsername() == null ||
-////		   dto.getPassword() == null ||
-////		   dto.getUName()    == null ||
-////		   dto.getUPhone()   == null ||
-////		   dto.getUEmail()   == null ||
-////		   dto.getUGender()  == null ||
-////		   !dto.getUsername().equals("") ||
-////		   !dto.getPassword().equals("") ||
-////		   !dto.getUName().equals("")    ||
-////		   !dto.getUPhone().equals("")   ||
-////		   !dto.getUEmail().equals("")   ||
-////		   !dto.getUGender().equals("")
-////		) {
-////			return "error/error";
-////		}
+//		if(dto.getUsername() == null ||
+//		   dto.getPassword() == null ||
+//		   dto.getUName()    == null ||
+//		   dto.getUPhone()   == null ||
+//		   dto.getUEmail()   == null ||
+//		   dto.getUGender()  == null ||
+//		   !dto.getUsername().equals("") ||
+//		   !dto.getPassword().equals("") ||
+//		   !dto.getUName().equals("")    ||
+//		   !dto.getUPhone().equals("")   ||
+//		   !dto.getUEmail().equals("")   ||
+//		   !dto.getUGender().equals("")
+//		) {
+//			return "error/error";
+//		}
 //		
-//		userRepository.save(user);
+//		userRepository.save(dto.toEntity());
 //		
 //		return "redirect:/loginForm"; // Redirection (300) ViewResolver
 //		
 //	}
-	
+//	
 	@PostMapping("/join")
 	public String join(JoinReqDto dto) {
 

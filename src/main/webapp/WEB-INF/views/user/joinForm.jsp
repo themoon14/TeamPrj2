@@ -16,10 +16,10 @@
 	    <input type="password" name="password" class="form-control" placeholder="Enter password"  maxlength="20" required="required">
 	  </div>
 	  <div class="form-group">
-	    <input type="text" name= "uName" class="form-control" placeholder="Enter name"  maxlength="20" required="required">
+	    <input type="text" name="uName" class="form-control" placeholder="Enter name"  maxlength="20" required="required">
 	  </div>
 	  <div class="form-group">
-	    <input type="text" name= "uPhone" class="form-control" placeholder="Enter phone"  maxlength="20" required="required">
+	    <input type="text" name="uPhone" class="form-control" placeholder="Enter phone"  maxlength="20" required="required">
 	  </div>	  
 	  <div class="form-group">
 	    <input type="email" name="uEmail" class="form-control" placeholder="Enter email"  required="required">
