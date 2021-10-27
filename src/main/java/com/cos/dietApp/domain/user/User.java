@@ -36,6 +36,6 @@ public class User {
 	private int uHeight;
 	private int uMuscle;
 	private int uFat;
-	private int uBMI;
+	private double uBMI;
 
 }

@@ -21,7 +21,8 @@ public class JoinReqDto {
 	private int uHeight;
 	private int uMuscle;
 	private int uFat;
-	private int uBMI;
+	private double uBMI;
+//	private double uBMI = uWeight / ((uHeight/100) * (uHeight/100));
 
 	public User toEntity() {
 		User user = new User();

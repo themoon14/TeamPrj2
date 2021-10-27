@@ -51,7 +51,7 @@
 	    <input type="text" name="uFat" class="form-control" placeholder="Enter fat">
 	  </div>
 	  <div class="form-group">
-	    <input type="text" name="uBMI" class="form-control" placeholder="Your BMI">
+	    <input type="text" name="uBMI" class="form-control" placeholder="Your BMI" >
 	  </div>
 	  <!-- Body Info end -->
 	  
